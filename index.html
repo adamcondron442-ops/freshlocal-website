@@ -5,151 +5,253 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FreshLocal | Discover Fresh Local Food Near You</title>
+<title>FreshLocal | Find Local Food Producers & Vendors Near You</title>
 
-<meta name="description" content="FreshLocal helps you discover fresh local food, produce and independent food vendors near you.">
-
+<meta name="description" content="Find local food producers, fresh produce, farm eggs, honey, flowers and independent food vendors near you with FreshLocal.">
+<meta name="keywords" content="local food, farm eggs, local produce, honey, vegetables, food vans, Norfolk, FreshLocal">
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+--green:#2e7d32;
+--green-light:#4caf50;
+--cream:#fafaf5;
+--dark:#263238;
+--grey:#6b7280;
+--white:#ffffff;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fafaf5;
-    color: #333;
-    line-height: 1.6;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+html{
+scroll-behavior:smooth;
 }
 
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(180deg,#ffffff,#f3f8f3);
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:var(--cream);
+color:var(--dark);
+line-height:1.6;
 }
 
-.logo {
-    max-width: 320px;
-    width: 90%;
-    margin-bottom: 25px;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #2e7d32;
-    margin-bottom: 15px;
+nav{
+background:white;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-.hero p {
-    font-size: 1.25rem;
-    max-width: 700px;
-    margin: auto;
-    margin-bottom: 30px;
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
 }
 
-.button {
-    display: inline-block;
-    background: #2e7d32;
-    color: white;
-    text-decoration: none;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+.brand{
+font-size:1.5rem;
+font-weight:bold;
+color:var(--green);
 }
 
-.button:hover {
-    background: #1f5a23;
+.nav-links a{
+text-decoration:none;
+margin-left:25px;
+color:var(--dark);
+font-weight:600;
 }
 
-.section {
-    padding: 70px 0;
+.hero{
+padding:80px 0;
+background:linear-gradient(180deg,#ffffff,#eef7ee);
 }
 
-.section h2 {
-    text-align: center;
-    color: #2e7d32;
-    margin-bottom: 40px;
-    font-size: 2rem;
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 25px;
+.hero-logo{
+max-width:340px;
+margin-bottom:20px;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+.hero h1{
+font-size:3.5rem;
+line-height:1.1;
+margin-bottom:20px;
+color:var(--green);
 }
 
-.card h3 {
-    margin-bottom: 12px;
-    color: #2e7d32;
+.hero p{
+font-size:1.2rem;
+color:var(--grey);
+margin-bottom:30px;
 }
 
-.highlight {
-    background: #eaf5ea;
+.btn{
+display:inline-block;
+background:var(--green);
+color:white;
+text-decoration:none;
+padding:15px 30px;
+border-radius:10px;
+font-weight:bold;
+transition:0.3s;
 }
 
-.waitlist {
-    text-align: center;
-    background: #2e7d32;
-    color: white;
-    padding: 70px 20px;
+.btn:hover{
+background:#1f5a23;
 }
 
-.waitlist h2 {
-    color: white;
-    margin-bottom: 20px;
+.phone{
+background:white;
+border-radius:25px;
+padding:25px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
 
-.waitlist p {
-    max-width: 700px;
-    margin: auto;
-    margin-bottom: 25px;
+.phone h3{
+text-align:center;
+margin-bottom:15px;
+color:var(--green);
 }
 
-.email-button {
-    display: inline-block;
-    background: white;
-    color: #2e7d32;
-    text-decoration: none;
-    padding: 14px 30px;
-    border-radius: 8px;
-    font-weight: bold;
+.map-item{
+display:flex;
+justify-content:space-between;
+padding:12px;
+margin-bottom:10px;
+background:#f4f8f4;
+border-radius:10px;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #f0f0f0;
+.stats{
+padding:30px 0;
+background:var(--green);
+color:white;
 }
 
-footer a {
-    color: #2e7d32;
-    text-decoration: none;
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+text-align:center;
+gap:20px;
 }
 
-@media(max-width:768px){
-
-.hero h1 {
-    font-size: 2.2rem;
+.stat{
+font-size:1.2rem;
+font-weight:bold;
 }
 
-.hero p {
-    font-size: 1.05rem;
+.section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:2.4rem;
+color:var(--green);
+margin-bottom:20px;
+}
+
+.section-subtitle{
+text-align:center;
+max-width:700px;
+margin:auto;
+margin-bottom:50px;
+color:var(--grey);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card h3{
+margin-bottom:10px;
+color:var(--green);
+}
+
+.highlight{
+background:#edf7ed;
+}
+
+.cta{
+background:var(--green);
+color:white;
+text-align:center;
+padding:90px 20px;
+}
+
+.cta h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.cta .btn{
+background:white;
+color:var(--green);
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#f0f0f0;
+}
+
+footer p{
+margin-bottom:8px;
+}
+
+@media(max-width:900px){
+
+.hero-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-logo{
+margin:auto;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.nav-links{
+display:none;
 }
 
 }
@@ -160,93 +262,83 @@ footer a {
 
 <body>
 
+<nav>
+<div class="container nav-inner">
+<div class="brand">FreshLocal</div>
+
+<div class="nav-links">
+<a href="#buyers">Buyers</a>
+<a href="#sellers">Sellers</a>
+<a href="#launch">Launch</a>
+</div>
+</div>
+</nav>
+
 <section class="hero">
 
-<div class="container">
+<div class="container hero-grid">
+
+<div>
 
 <img src="images/freshlocal-logo.png"
-  alt="FreshLocal Logo"
-  class="logo">
+alt="FreshLocal Logo"
+class="hero-logo">
 
-<h1>Discover Fresh Local Food Near You</h1>
+<h1>Fresh Local Food, Right Around The Corner</h1>
 
 <p>
-Find fresh eggs, vegetables, honey, flowers, baked goods and independent food vendors in your local area.
+Discover local producers, fresh produce, and independent food vendors near you.
 </p>
 
-<a href="mailto:hello@freshlocal.org.uk" class="button">
-Join The Waiting List
+<a href="mailto:hello@freshlocal.org.uk" class="btn">
+Join Early Access
 </a>
 
 </div>
 
+<div class="phone">
+
+<h3>Available Nearby Today</h3>
+
+<div class="map-item">
+<span>🥚 Fresh Eggs</span>
+<span>0.8 miles</span>
+</div>
+
+<div class="map-item">
+<span>🍯 Local Honey</span>
+<span>2.1 miles</span>
+</div>
+
+<div class="map-item">
+<span>🥕 Seasonal Vegetables</span>
+<span>1.6 miles</span>
+</div>
+
+<div class="map-item">
+<span>☕ Coffee Trailer</span>
+<span>0.5 miles</span>
+</div>
+
+<div class="map-item">
+<span>🍔 Burger Van</span>
+<span>1.3 miles</span>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
+<section class="stats">
 
-<div class="container">
+<div class="container stats-grid">
 
-<h2>How FreshLocal Works</h2>
-
-<div class="features">
-
-<div class="card">
-<h3>📍 Find Nearby Sellers</h3>
-<p>
-Discover local growers, producers and food vendors close to your location.
-</p>
-</div>
-
-<div class="card">
-<h3>🥚 Fresh Produce</h3>
-<p>
-Find eggs, fruit, vegetables, honey, flowers and homemade goods from local suppliers.
-</p>
-</div>
-
-<div class="card">
-<h3>🚚 Mobile Food Vendors</h3>
-<p>
-Locate burger vans, coffee trailers and mobile caterers operating near you.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section highlight">
-
-<div class="container">
-
-<h2>For Buyers</h2>
-
-<div class="features">
-
-<div class="card">
-<h3>Support Local</h3>
-<p>
-Buy directly from independent producers and small businesses.
-</p>
-</div>
-
-<div class="card">
-<h3>Discover Hidden Gems</h3>
-<p>
-Find local suppliers and food vendors you may never have known existed.
-</p>
-</div>
-
-<div class="card">
-<h3>Fresh & Local</h3>
-<p>
-Enjoy food that hasn't travelled hundreds of miles before reaching your table.
-</p>
-</div>
-
-</div>
+<div class="stat">📍 Local Discovery</div>
+<div class="stat">🌱 Fresh Produce</div>
+<div class="stat">🚚 Mobile Vendors</div>
+<div class="stat">🤝 Support Local</div>
 
 </div>
 
@@ -256,29 +348,94 @@ Enjoy food that hasn't travelled hundreds of miles before reaching your table.
 
 <div class="container">
 
-<h2>For Sellers</h2>
+<h2 class="section-title">Local Food Is Hard To Discover</h2>
 
-<div class="features">
+<p class="section-subtitle">
+Many independent producers rely on roadside signs, social media and word of mouth. FreshLocal makes it easier for customers to discover what's available nearby today.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>What's Available?</h3>
+<p>Discover local produce, food vendors and independent sellers near you.</p>
+</div>
+
+<div class="card">
+<h3>Where Can I Find It?</h3>
+<p>See locations, opening times and availability in one place.</p>
+</div>
+
+<div class="card">
+<h3>Who's Selling Nearby?</h3>
+<p>Connect directly with local producers and traders.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section highlight" id="buyers">
+
+<div class="container">
+
+<h2 class="section-title">For Buyers</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🥚 Farm Fresh Eggs</h3>
+<p>Find local producers selling fresh eggs nearby.</p>
+</div>
+
+<div class="card">
+<h3>🍯 Honey & Preserves</h3>
+<p>Discover independent beekeepers and artisan producers.</p>
+</div>
+
+<div class="card">
+<h3>🥕 Fruit & Vegetables</h3>
+<p>Buy fresh seasonal produce grown locally.</p>
+</div>
+
+<div class="card">
+<h3>☕ Coffee & Food Vans</h3>
+<p>Locate independent food vendors operating today.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="sellers">
+
+<div class="container">
+
+<h2 class="section-title">For Sellers</h2>
+
+<p class="section-subtitle">
+Whether you're a grower, beekeeper, baker, florist or mobile caterer, FreshLocal helps local customers discover your products.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Increase Visibility</h3>
+<p>Make it easier for customers to find you.</p>
+</div>
+
+<div class="card">
+<h3>Show Availability</h3>
+<p>Highlight what's available today and where to find it.</p>
+</div>
 
 <div class="card">
 <h3>Grow Your Customer Base</h3>
-<p>
-Help local people discover your products and your location.
-</p>
-</div>
-
-<div class="card">
-<h3>Promote Availability</h3>
-<p>
-Show customers what's available today and when you're open.
-</p>
-</div>
-
-<div class="card">
-<h3>Simple & Local</h3>
-<p>
-FreshLocal is designed specifically for independent producers and food vendors.
-</p>
+<p>Connect directly with people looking for local food.</p>
 </div>
 
 </div>
@@ -287,15 +444,15 @@ FreshLocal is designed specifically for independent producers and food vendors.
 
 </section>
 
-<section class="waitlist">
+<section class="cta" id="launch">
 
-<h2>Launching Soon</h2>
+<h2>Launching In Norfolk</h2>
 
 <p>
-FreshLocal is currently being developed. Join our waiting list to receive updates and early access opportunities.
+FreshLocal is currently being developed and will launch initially in Norfolk, connecting communities with local producers and independent food vendors.
 </p>
 
-<a href="mailto:hello@freshlocal.org.uk" class="email-button">
+<a href="mailto:hello@freshlocal.org.uk" class="btn">
 Register Interest
 </a>
 
@@ -305,13 +462,11 @@ Register Interest
 
 <p><strong>FreshLocal</strong></p>
 
-<p>
-Discover Fresh Local Food Near You
-</p>
+<p>Discover Fresh Local Food Near You</p>
 
-<p>
-<a href="https://x.com/FreshLocalUK">@FreshLocalUK</a>
-</p>
+<p>@FreshLocalUK</p>
+
+<p>freshlocal.org.uk</p>
 
 </footer>
 
