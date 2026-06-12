@@ -1,107 +1,318 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshLocal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f8faf7;
-            color: #333;
-        }
+<title>FreshLocal | Discover Fresh Local Food Near You</title>
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: #2e7d32;
-            color: white;
-        }
+<meta name="description" content="FreshLocal helps you discover fresh local food, produce and independent food vendors near you.">
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+<style>
 
-        .hero p {
-            font-size: 1.2rem;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .content {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafaf5;
+    color: #333;
+    line-height: 1.6;
+}
 
-        .feature {
-            margin-bottom: 30px;
-        }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #2e7d32;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-top: 20px;
-        }
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(180deg,#ffffff,#f3f8f3);
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #eee;
-        }
-    </style>
+.logo {
+    max-width: 320px;
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #2e7d32;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #1f5a23;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.section h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #2e7d32;
+}
+
+.highlight {
+    background: #eaf5ea;
+}
+
+.waitlist {
+    text-align: center;
+    background: #2e7d32;
+    color: white;
+    padding: 70px 20px;
+}
+
+.waitlist h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.waitlist p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.email-button {
+    display: inline-block;
+    background: white;
+    color: #2e7d32;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #f0f0f0;
+}
+
+footer a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+@media(max-width:768px){
+
+.hero h1 {
+    font-size: 2.2rem;
+}
+
+.hero p {
+    font-size: 1.05rem;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <section class="hero">
-    <h1>FreshLocal</h1>
 
-    <p>
-        Discover fresh local food near you.
-    </p>
+<div class="container">
 
-    <a class="button" href="mailto:hello@freshlocal.org.uk">
-        Join the Waiting List
-    </a>
+<img src="images/freshlocal-logo.png"
+  alt="FreshLocal Logo"
+  class="logo">
+
+<h1>Discover Fresh Local Food Near You</h1>
+
+<p>
+Find fresh eggs, vegetables, honey, flowers, baked goods and independent food vendors in your local area.
+</p>
+
+<a href="mailto:hello@freshlocal.org.uk" class="button">
+Join The Waiting List
+</a>
+
+</div>
+
 </section>
 
-<section class="content">
+<section class="section">
 
-    <div class="feature">
-        <h2>Find Local Food</h2>
+<div class="container">
 
-        <p>
-            Discover eggs, vegetables, honey, flowers, baked goods and more from independent local producers.
-        </p>
-    </div>
+<h2>How FreshLocal Works</h2>
 
-    <div class="feature">
-        <h2>Support Local Businesses</h2>
+<div class="features">
 
-        <p>
-            Connect directly with growers, beekeepers, bakers, florists and food vendors in your community.
-        </p>
-    </div>
+<div class="card">
+<h3>📍 Find Nearby Sellers</h3>
+<p>
+Discover local growers, producers and food vendors close to your location.
+</p>
+</div>
 
-    <div class="feature">
-        <h2>Discover Mobile Food Vendors</h2>
+<div class="card">
+<h3>🥚 Fresh Produce</h3>
+<p>
+Find eggs, fruit, vegetables, honey, flowers and homemade goods from local suppliers.
+</p>
+</div>
 
-        <p>
-            Find burger vans, coffee trailers and mobile caterers wherever they are operating.
-        </p>
-    </div>
+<div class="card">
+<h3>🚚 Mobile Food Vendors</h3>
+<p>
+Locate burger vans, coffee trailers and mobile caterers operating near you.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section highlight">
+
+<div class="container">
+
+<h2>For Buyers</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>Support Local</h3>
+<p>
+Buy directly from independent producers and small businesses.
+</p>
+</div>
+
+<div class="card">
+<h3>Discover Hidden Gems</h3>
+<p>
+Find local suppliers and food vendors you may never have known existed.
+</p>
+</div>
+
+<div class="card">
+<h3>Fresh & Local</h3>
+<p>
+Enjoy food that hasn't travelled hundreds of miles before reaching your table.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2>For Sellers</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>Grow Your Customer Base</h3>
+<p>
+Help local people discover your products and your location.
+</p>
+</div>
+
+<div class="card">
+<h3>Promote Availability</h3>
+<p>
+Show customers what's available today and when you're open.
+</p>
+</div>
+
+<div class="card">
+<h3>Simple & Local</h3>
+<p>
+FreshLocal is designed specifically for independent producers and food vendors.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="waitlist">
+
+<h2>Launching Soon</h2>
+
+<p>
+FreshLocal is currently being developed. Join our waiting list to receive updates and early access opportunities.
+</p>
+
+<a href="mailto:hello@freshlocal.org.uk" class="email-button">
+Register Interest
+</a>
 
 </section>
 
 <footer>
-    <p>FreshLocal © 2026</p>
-    <p>@FreshLocalUK</p>
+
+<p><strong>FreshLocal</strong></p>
+
+<p>
+Discover Fresh Local Food Near You
+</p>
+
+<p>
+<a href="https://x.com/FreshLocalUK">@FreshLocalUK</a>
+</p>
+
 </footer>
 
 </body>
