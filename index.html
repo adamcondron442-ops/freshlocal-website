@@ -64,6 +64,7 @@ margin:auto;
 }
 
 nav{
+
 background:white;
 position:sticky;
 top:0;
@@ -79,9 +80,14 @@ padding:18px 0;
 }
 
 .brand{
-font-size:1.5rem;
-font-weight:bold;
-color:var(--green);
+display:flex;
+align-items:center;
+}
+
+.brand img{
+height:42px;
+width:auto;
+display:block;
 }
 
 .nav-links a{
@@ -286,7 +292,8 @@ display:none;
 <nav>
 <div class="container nav-inner">
 <div class="brand">
-  <img src="images/logo-transparent.png" alt="FreshLocal Logo">
+  <img src="images/logo-transparent.png" 
+	alt="FreshLocal Logo">
 </div>
 
 <div class="nav-links">
