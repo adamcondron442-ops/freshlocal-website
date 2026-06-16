@@ -81,16 +81,19 @@ box-shadow:0 2px 10px rgba(0,0,0,0.05);
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 0;
+padding:8px 0;
+height:95px;
+overflow:visible;
 }
 
 .brand{
 display:flex;
 align-items:center;
+height:95px;
 }
 
 .brand img{
-height:70px;
+height:125px;
 width:auto;
 display:block;
 }
@@ -103,15 +106,16 @@ font-weight:600;
 }
 
 .hero{
-padding:45px 0 70px 0;
+padding:10px 0 70px 0;
 background:linear-gradient(180deg,#ffffff 0%,#f3faf3 100%);
 }
 
 .hero-grid{
 display:grid;
 grid-template-columns:1fr 0.9fr;
-gap:60px;
+gap:30px;
 align-items:center;
+margin-top:-20px;
 }
 
 .hero-logo{
@@ -261,14 +265,15 @@ margin-bottom:8px;
 
 @media(max-width:900px){
 
-  .nav-inner{
-    flex-direction:column;
-    gap:8px;
-    padding:8px 0;
-  }
+.nav-inner{
+flex-direction:column;
+gap:8px;
+padding:8px 0;
+height:auto;
+}
 
   .brand img{
-    height:70px;
+    height:85px;
   }
 
   .nav-links{
