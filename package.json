@@ -1,0 +1,12 @@
+{
+  "name": "freshlocal-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "preview": "npx wrangler dev --local"
+  },
+  "devDependencies": {
+    "wrangler": "4.111.0"
+  }
+}

@@ -1,0 +1,18 @@
+name = "freshlocal-enquiry"
+main = "worker/enquiry.js"
+compatibility_date = "2026-07-16"
+workers_dev = true
+
+
+[[send_email]]
+name = "ENQUIRY_EMAIL"
+destination_address = "freshlocal@protonmail.com"
+allowed_sender_addresses = ["enquiries@freshlocal.org.uk"]
+
+# Production routes intentionally remain disabled until testing and approval.
+# [[routes]]
+# pattern = "freshlocal.org.uk/api/enquiry*"
+# zone_name = "freshlocal.org.uk"
+# [[routes]]
+# pattern = "www.freshlocal.org.uk/api/enquiry*"
+# zone_name = "freshlocal.org.uk"
