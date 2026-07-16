@@ -1,4 +1,4 @@
-name = "freshlocal-enquiry"
+name = "freshlocal"
 main = "worker/enquiry.js"
 compatibility_date = "2026-07-16"
 workers_dev = true
