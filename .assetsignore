@@ -1,0 +1,16 @@
+.git/
+.wrangler/
+.codex/
+.agents/
+.dev.vars
+.gitignore
+.assetsignore
+node_modules/
+worker/
+test/
+freshlocal/
+FreshLocal Print Package/
+freshlocal chat manuscript.txt
+package.json
+package-lock.json
+wrangler.toml
