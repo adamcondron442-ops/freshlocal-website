@@ -33,6 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/enquiry.css">
 
 <style>
 
@@ -393,9 +394,9 @@ height:auto;
 Fresh food produced by local people, just around the corner.
 </p>
 
-<a href="mailto:hello@freshlocal.org.uk" class="btn">
+<button type="button" class="btn js-open-enquiry">
 Join Early Access
-</a>
+</button>
 
 </div>
 
@@ -597,9 +598,9 @@ FreshLocal is building a new way for people to discover what local producers, fo
 Inspired by the Norfolk local economy and designed for communities everywhere, the FreshLocal app is currently in development and will eventually be available on App Store and Google Play.
 </p>
 
-<a href="mailto:hello@freshlocal.org.uk" class="btn">
+<button type="button" class="btn js-open-enquiry">
 Register Interest
-</a>
+</button>
 
 <div class="cta-cards">
 
@@ -656,6 +657,20 @@ Register Interest
 
 </section>
 
+<dialog class="enquiry-dialog" id="enquiry-dialog" aria-labelledby="enquiry-title" aria-describedby="enquiry-intro">
+<div class="dialog-inner"><div class="dialog-header"><h2 id="enquiry-title">Get in touch with FreshLocal</h2><button type="button" class="dialog-close" aria-label="Close enquiry form">&times;</button></div>
+<p class="dialog-intro" id="enquiry-intro">Tell us how you would like to be involved. Fields marked with an asterisk are required.</p>
+<form id="enquiry-form" novalidate><div class="form-grid">
+<div class="form-group"><label for="enquiry-name">Name *</label><input class="form-control" id="enquiry-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="name-error"><span class="field-error" id="name-error"></span></div>
+<div class="form-group"><label for="enquiry-email">Email address *</label><input class="form-control" id="enquiry-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" required aria-describedby="email-error"><span class="field-error" id="email-error"></span></div>
+<div class="form-group"><label for="interest-type">Interest type *</label><select class="form-control" id="interest-type" name="interestType" required aria-describedby="interest-error"><option value="">Please choose</option><option>Buyer</option><option>Seller or producer</option><option>Local business</option><option>Community organisation</option><option>Other</option></select><span class="field-error" id="interest-error"></span></div>
+<div class="form-group"><label for="enquiry-area">Town or postcode area <span class="optional">(optional)</span></label><input class="form-control" id="enquiry-area" name="area" type="text" autocomplete="postal-code" maxlength="100" aria-describedby="area-error"><span class="field-error" id="area-error"></span></div>
+<div class="form-group form-group-full"><label for="enquiry-message">Enquiry or message *</label><textarea class="form-control" id="enquiry-message" name="message" maxlength="2000" required aria-describedby="message-error"></textarea><span class="field-error" id="message-error"></span></div>
+<div class="form-group form-group-full"><div class="consent-row"><input id="enquiry-consent" name="consent" type="checkbox" required aria-describedby="consent-error"><label for="enquiry-consent">I acknowledge that FreshLocal may use the details I have supplied to respond to my enquiry. *</label></div><span class="field-error" id="consent-error"></span></div>
+<div class="honeypot" aria-hidden="true"><label for="enquiry-company">Company website</label><input id="enquiry-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+</div><div class="form-actions"><button type="submit" class="btn" id="enquiry-submit">Send enquiry</button></div><p class="status-message" id="enquiry-status" role="status" aria-live="polite"></p></form></div>
+</dialog>
+
 <footer>
 
 <p><strong>FreshLocal</strong></p>
@@ -667,6 +682,8 @@ Register Interest
 <p>freshlocal.org.uk</p>
 
 </footer>
+
+<script src="/enquiry.js"></script>
 
 </body>
 </html>
